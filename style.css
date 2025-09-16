@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 /* Front page */
@@ -16,6 +15,7 @@
 }
 .h1 {
   margin-left: 60px;
+  font-size: 2rem;
 }
 
 .butt {
@@ -57,7 +57,8 @@ button:hover {
   gap: 20px;
   font-size: 28px;
   color: white;
-  margin: 5px 80px;
+  margin: 10px auto;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .icon i {
@@ -70,29 +71,29 @@ button:hover {
 
 /* Columns */
 .row {
-  margin: 0px 300px;
+  margin: 0 auto;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  max-width: 1200px;
   min-height: 400px;
+  justify-content: center;
+  gap: 20px;
 }
-
-
 
 .imge img {
   border-radius: 50%;
   height: 200px;
+  width: 200px;
   display: block;
-   width: 200px;
-  margin: 40px auto;
+  margin: 20px auto;
   overflow: hidden;
 }
 
 /* About */
-
-#description{
- color: white;
+#description {
+  color: white;
 }
 .about {
   background: linear-gradient(to right, black, grey);
@@ -110,23 +111,20 @@ button:hover {
 }
 
 /* Technical Skills */
-.technical {
-  text-align: center;
-}
 .technical-skills {
   padding: 50px 20px;
   background: linear-gradient(to right, black, grey);
   text-align: center;
 }
 .section-title h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 40px;
   color: white;
   font-weight: bold;
 }
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
@@ -145,7 +143,7 @@ button:hover {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
 }
 .card h2 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 15px;
   color: #007bff;
 }
@@ -196,7 +194,7 @@ button:hover {
   border-radius: 10px;
 }
 .banner h1 {
-  font-size: 28px;
+  font-size: 26px;
   margin-bottom: 10px;
 }
 .banner h4 {
@@ -239,7 +237,7 @@ button:hover {
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
 }
 .cards h2 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 15px;
   display: flex;
   align-items: center;
@@ -272,12 +270,10 @@ button:hover {
   color: white;
   border: 1px solid white;
   padding: 20px;
-  margin: 15px 20px;
+  margin: 15px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   text-align: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .col5:hover {
@@ -286,20 +282,41 @@ button:hover {
 }
 
 /* ✅ Responsive tweaks */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  .h1 {
+    margin-left: 20px;
+    font-size: 1.8rem;
+  }
   .row {
     flex-direction: column;
-    text-align: center;
+    padding: 0 20px;
   }
-  .imge img {
-    margin: 20px auto;
-  }
-  .icon {
-    justify-content: center;
-    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .section-title h1 {
+    font-size: 1.8rem;
   }
   .banner {
     margin: 20px;
     padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .h1 {
+    margin-left: 10px;
+    font-size: 1.5rem;
+  }
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+  .skills span, 
+  .skill span, 
+  .cards span {
+    font-size: 0.8rem;
+    padding: 6px 10px;
   }
 }
